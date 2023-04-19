@@ -5,20 +5,17 @@ import SignupPage from './components/SignupPage';
 import { Route, Routes, Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import MainPage from './components/MainPage';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className='parent'>
-    <ul className='navbar'>
-      <li className='login'><Link to={"/login"}>Login</Link></li>
-      <li className='home'><Link to={"/"}>Home</Link></li>
-      <li className='signup'><Link to={"/signup"}>SignUp</Link></li>
-    </ul>
+      
     <Routes>
-      <Route path="/" element={<HomePage></HomePage>}></Route>  
-      <Route path="/login" element={<LoginPage></LoginPage>}></Route>  
-      <Route path="/signup" element={<SignupPage></SignupPage>}></Route> 
-      <Route path="/mainpage" element={<MainPage></MainPage>}></Route> 
+      <Route path="/" element={<><Header/><HomePage/></>}></Route>  
+      <Route path="/login" element={<><Header/><LoginPage/></>}></Route>  
+      <Route path="/signup" element={<><Header/><SignupPage/></>}></Route> 
+      <Route path="/mainpage" element={<MainPage/>}></Route> 
     </Routes>
     </div>
   );

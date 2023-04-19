@@ -1,14 +1,30 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './loginpage.css'
+
 function LoginPage() {
+    const navigate = useNavigate();
+    // const [success, setSuccess] = useState(false)
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [email, setEmail] = useState('');
   
-    const handleSubmit = (event) => {
-      event.preventDefault();
-      console.log('Submitted!', { username, password, email });
+    async function handleSubmit(e){
+    e.preventDefault();
+
+    // console.log(JSON.stringify({email:credentials.email,password:credentials.password}))
+    const response=await fetch('http://localhost:5000/login',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify({username:username,password:password})
+    })
+    const data = await response.json();
+    if(data.success) navigate('/mainpage')
+    else{
+      alert('enter correct credentials')
     }
+  }
   
     return (
       <form onSubmit={handleSubmit}>
@@ -28,15 +44,6 @@ function LoginPage() {
             id="password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
-          />
-        </div>
-        <div className='formele'>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={(event) => setEmail(event.target.value)}
           />
         </div>
         <button type="submit">Login</button>
