@@ -6,8 +6,14 @@ function SignupPage() {
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
 
-    const handleSubmit = (event) => {
+    async function handleSubmit (event){
       event.preventDefault();
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
       console.log('Submitted!', { username, password, email });
     }
   

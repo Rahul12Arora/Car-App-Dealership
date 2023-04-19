@@ -4,6 +4,7 @@ import LoginPage from './components/LoginPage';
 import SignupPage from './components/SignupPage';
 import { Route, Routes, Link } from 'react-router-dom';
 import HomePage from './components/HomePage';
+import MainPage from './components/MainPage';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage></HomePage>}></Route>  
       <Route path="/login" element={<LoginPage></LoginPage>}></Route>  
-      <Route path="/signup" element={<SignupPage></SignupPage>}></Route>  
+      <Route path="/signup" element={<SignupPage></SignupPage>}></Route> 
+      <Route path="/mainpage" element={<MainPage></MainPage>}></Route> 
     </Routes>
     </div>
   );
