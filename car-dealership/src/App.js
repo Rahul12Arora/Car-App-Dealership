@@ -7,7 +7,7 @@ import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <>
+    <div className='parent'>
     <ul className='navbar'>
       <li className='login'><Link to={"/login"}>Login</Link></li>
       <li className='home'><Link to={"/"}>Home</Link></li>
@@ -18,7 +18,7 @@ function App() {
       <Route path="/login" element={<LoginPage></LoginPage>}></Route>  
       <Route path="/signup" element={<SignupPage></SignupPage>}></Route>  
     </Routes>
-    </>
+    </div>
   );
 }
 
