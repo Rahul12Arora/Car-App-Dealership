@@ -62,12 +62,7 @@
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
 }
-.center::before {
-  /* content: "INFINITY";
-  font-size: 8rem;
-  font-weight: 100;
-  font-style: normal; */
-}
+
 
 
 .container {
