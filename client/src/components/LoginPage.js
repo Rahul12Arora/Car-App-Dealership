@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './loginpage.css'
 
 function LoginPage() {
+  const port = process.env.REACT_APP_BACK_URL;
     const navigate = useNavigate();
     // const [success, setSuccess] = useState(false)
     const [username, setUsername] = useState('');
@@ -12,7 +13,7 @@ function LoginPage() {
     e.preventDefault();
 
     // console.log(JSON.stringify({email:credentials.email,password:credentials.password}))
-    const response=await fetch('http://localhost:5000/login',{
+    const response=await fetch(`${port}/login`,{
       method:'POST',
       headers:{
         'Content-Type':'application/json'
