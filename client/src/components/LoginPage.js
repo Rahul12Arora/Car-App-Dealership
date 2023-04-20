@@ -48,6 +48,7 @@ function LoginPage() {
           />
         </div>
         <button type="submit">Login</button>
+        <h1>App development under process: username: user1   password: user1</h1>
       </form>
     );
 }
