@@ -4,7 +4,8 @@ import homeImage from '../assets/homeimage.png';
 
 function HomePage() {
   return (
-    <div><img className='image' src={homeImage}></img></div>
+    <div><h1>App development under process: Please directly proceed to login</h1><img className='image' src={homeImage}></img>
+    </div>
   )
 }
 

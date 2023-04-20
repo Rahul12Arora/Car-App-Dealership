@@ -47,6 +47,7 @@ function SignupPage() {
           />
         </div>
         <button type="submit">Signup</button>
+        <h1>App development under process: Please directly proceed to login</h1>
       </form>
     );
 }
