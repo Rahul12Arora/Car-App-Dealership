@@ -4,7 +4,6 @@ import CarList from '../carcard/CarList'
 function MainPage() {
   return (
     <>
-    
     <CarList/>
     </>
   )
