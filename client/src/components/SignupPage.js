@@ -8,7 +8,7 @@ function SignupPage() {
 
     async function handleSubmit (event){
       event.preventDefault();
-      const response = await fetch(`${process.env.REACT_APP_BACK_URL}/api/signup`, {
+      const response = await fetch('https://car-backend-mp0s.onrender.com/signup', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password }),
