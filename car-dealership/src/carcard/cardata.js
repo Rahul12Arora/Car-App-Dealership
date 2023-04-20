@@ -1,4 +1,4 @@
-const cararr = [
+export const cararr = [
     {
       imgsrc: 'https://cdn.bigboytoyz.com/new-version/products/jaguar-xjl-portfolio-bbt-2022071.jpg',
       description: 'Jaguar is the luxury vehicle brand of Jaguar Land Rover, a British multinational car manufacturer with its headquarters in Whitley, Coventry, England.',
@@ -11,7 +11,7 @@ const cararr = [
       maxSpeed: 250,
     },
     {
-      imgsrc: 'https://cdn.bigboytoyz.com/new-version/products/audi-a8-l-60-tfsi-quattro-bbt-202195.jpg',
+      imgsrc: 'https://images.app.goo.gl/kPPYoDnJL4UepGUj9',
       description: 'The Audi A8 is a four-door, full-size, luxury sedan manufactured and marketed by the German automaker Audi. Succeeding the Audi V8, and now in its fourth generation, the A8 has been offered with both front- or permanent all-wheel drive—and in short- and long-wheelbase variants.',
       modelName: 'A8 L 60 TFSI quattro',
       year: 2021,
@@ -99,4 +99,3 @@ const cararr = [
         }]
   
 
-module.exports = cararr;
